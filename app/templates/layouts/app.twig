@@ -12,7 +12,13 @@
 {% block content %}
 {% endblock %}
 
-{% include 'partials/section.twig' %}
+<div class="flex">
+
+  <div class=" w-1/5">{% include 'partials/sitebar.twig' %}</div>
+
+  <div class=" w-full">{% include 'partials/section.twig' %}</div>
+
+</div>
 
 {% include 'partials/footer.twig' %}
 
