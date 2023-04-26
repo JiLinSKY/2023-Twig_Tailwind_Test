@@ -1,36 +1,43 @@
-<div class="relative">
-  <button type="button" class="inline-flex justify-center items-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" id="menu-button" aria-expanded="false" aria-haspopup="true">
-    Options
-    <!-- Heroicon name: chevron-down -->
-    <svg class="-mr-1 ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-      <path fill-rule="evenodd" d="M5.293 7.707a1 1 0 0 1 0 1.414L9.586 13l-4.293 4.293a1 1 0 1 1-1.414-1.414L7.586 13l-3.293-3.293a1 1 0 0 1 0-1.414z" clip-rule="evenodd" />
-    </svg>
-  </button>
-
-  <div class="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
-    <div class="py-1" role="none">
-      <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" role="menuitem" tabindex="-1" id="menu-item-0">Edit</a>
-      <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" role="menuitem" tabindex="-1" id="menu-item-1">Duplicate</a>
-      <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" role="menuitem" tabindex="-1" id="menu-item-2">Archive</a>
-      <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" role="menuitem" tabindex="-1" id="menu-item-3">Move</a>
+<div class="relative mx-4 ">
+    <button type="button" class=" w-full flex items-center justify-start items-center p-1 bg-white text-gray-700 hover:bg-gray-100 " id="menu-header" aria-expanded="false" aria-haspopup="true">
+        <svg class=" hover:bg-gray-200 hover:rounded-full p-1 mr-1 h-7 w-7" xmlns="http://www.w3.org/2000/svg"  fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+          </svg>
+    </button>
+  
+    <div class="origin-top-right absolute right-0 mt-2 w-full bg-white ring-1 ring-black ring-opacity-5 hidden" role="menu" aria-orientation="vertical" aria-labelledby="menu-header" tabindex="-1">
+      <div class="py-1" role="none">
+        <a href="#" class="flex block px-1 py-1 text-gray-700 hover:bg-gray-100 hover:text-gray-900" role="menuitem" tabindex="-1" id="menu-item-0">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 4.5h14.25M3 9h9.75M3 13.5h9.75m4.5-4.5v12m0 0l-3.75-3.75M17.25 21L21 17.25" />
+          </svg>
+          <p class="pl-3">Drum'n'Bass</p></a>
+          <a href="#" class="flex block px-1 py-1 text-gray-700 hover:bg-gray-100 hover:text-gray-900" role="menuitem" tabindex="-1" id="menu-item-0">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 4.5h14.25M3 9h9.75M3 13.5h9.75m4.5-4.5v12m0 0l-3.75-3.75M17.25 21L21 17.25" />
+          </svg>
+          <p class="pl-3">Rock</p></a>
+      </div>
     </div>
   </div>
-</div>
+  
+<div class=" border-b border-gray-300 mt-2 mb-2 w-5/6"></div>
 
 
-    <script>
-      const menuButton = document.getElementById('menu-button');
-const menuItems = document.querySelectorAll('[role="menuitem"]');
 
-menuButton.addEventListener('click', () => {
-  const expanded = menuButton.getAttribute('aria-expanded') === 'true' || false;
-  menuButton.setAttribute('aria-expanded', !expanded);
-  menuButton.nextElementSibling.classList.toggle('hidden');
-});
 
-menuItems.forEach(item => {
-  item.addEventListener('click', () => {
-    // Добавьте обработчик для выбранного элемента списка
-  });
-});
-        </script>
+<script>
+    const menuHeader = document.getElementById('menu-header');
+    const menuItems2 = document.querySelectorAll('[role="menuitem"]');
+
+    menuHeader.addEventListener('click', () => {
+    const expanded = menuHeader.getAttribute('aria-expanded') === 'true' || false;
+    menuHeader.setAttribute('aria-expanded', !expanded);
+    menuHeader.nextElementSibling.classList.toggle('hidden');
+    });
+
+    menuItems2.forEach(item => {
+    item.addEventListener('click', () => {
+    });
+    });
+</script>
