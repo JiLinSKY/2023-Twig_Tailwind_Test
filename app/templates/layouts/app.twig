@@ -9,21 +9,23 @@
 
 <div class=" relative">
 
-  {# <div class=" fixed top-0 left-0 w-full bg-white z-50">
+  <div class=" fixed top-0 left-0 w-full bg-white z-50">
     {% include 'partials/header.twig' %}
     {% block content %}
     {% endblock %}
-  </div> #}
+  </div>
+  
 
 
-  <div class="flex mt-5">
+
+  <div class=" relative flex mt-12">
       <div class="">
         {% include 'partials/sitebar.twig' %}
       </div>
   
-      <div>
-        <div >{% include 'partials/category.twig' %}</div>
-        <div >{% include 'partials/section.twig' %}</div>
+      <div class=" relative">
+        <div class="fixed bg-white z-50 w-full py-2" >{% include 'partials/category.twig' %}</div>
+        <div class=" static">{% include 'partials/section.twig' %}</div>
       </div>
 
   </div>
